@@ -1,10 +1,26 @@
+/*
+ * affiche la div toShow et toShow2 qui sont en hidden
+ */
+
 function affiche() {
 	document.getElementById ('toShow').style.display = 'block';
 	document.getElementById ('toShow2').style.display = 'block';
 }
+
+/*
+ * Genere un entier random 
+ * @param {number} max valeur max de l'entier genere
+ */
+
 function getRandomInt(max) {
 	return Math.floor(Math.random() * Math.floor(max));
 }
+
+/*
+ * Defini le type d'artiste (dj, groupe de musique ou musicien)
+ * @param {object} elem possede les donnees de la variable correspondante dans variables.js
+ * @param {string} alt string dans laquelle on stock et retourne le type d'artiste
+ */
 
 function defineType(elem,alt) {
 	let dj = 0;
@@ -33,6 +49,12 @@ function defineType(elem,alt) {
 	}
 }
 
+/*
+ * Recupere la liste des styles de musiaue d'un artiste et les retourne en miniscule et concatenes
+ * @param {object} elem possede les donnees de la variable correspondante dans variables.js
+ * @param {string} alt string dans laquelle on concatene la liste des styles de musique
+ */
+
 function getStyles(elem,alt)
 {
 	let i = 0;
@@ -47,6 +69,12 @@ function getStyles(elem,alt)
 	}
 	return alt;
 }
+
+/*
+ * Defini l'alt complet en fonction des probabilitees demandee par le sujet et de l'artiste selectione
+ * @param {number} value correspond a l'attribut value de l'<option> selectionee
+ */
+
 function defineAlt(value) {
 	let alt = "";
 	let rand = 0;
@@ -74,6 +102,11 @@ function defineAlt(value) {
 	return alt;
 }
 
+/*
+ * Creer le badge avec l'image, l'alt complet defini avant et redirige sur linkaband.com
+ * @param {number} val correspond a l'attribut value de l'<option> selectionee
+ * @param {string} alt string stockant l'alt complet a mettre pour le badge
+ */
 
 function createBadge(val,alt)
 {
@@ -84,6 +117,10 @@ function createBadge(val,alt)
 	let img = "https://www.caucus.fr/wp-content/uploads/2015/08/2956862e14290964afa37f521f43ac74_large.jpeg";
 	return(ret1 + img + ret2 + alt + ret3);
 }
+
+/*
+ * Appelle les fonctions precedente pour creer l'alt et le badge puis les ajoute dans le code html de index.html
+ */
 
 function defineOptionAndPrint() {
 	let test = 0;
