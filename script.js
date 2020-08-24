@@ -50,7 +50,7 @@ function defineType(elem,alt) {
 }
 
 /*
- * Recupere la liste des styles de musiaue d'un artiste et les retourne en miniscule et concatenes
+ * Recupere la liste des styles de musique d'un artiste et les retourne en miniscule et concatenes
  * @param {object} elem possede les donnees de la variable correspondante dans variables.js
  * @param {string} alt string dans laquelle on concatene la liste des styles de musique
  */
@@ -71,7 +71,7 @@ function getStyles(elem,alt)
 }
 
 /*
- * Defini l'alt complet en fonction des probabilitees demandee par le sujet et de l'artiste selectione
+ * Defini l'alt complet en fonction des probabilitees demandees par le sujet et de l'artiste selectione
  * @param {number} value correspond a l'attribut value de l'<option> selectionee
  */
 
@@ -119,7 +119,7 @@ function createBadge(val,alt)
 }
 
 /*
- * Appelle les fonctions precedente pour creer l'alt et le badge puis les ajoute dans le code html de index.html
+ * Appelle les fonctions precedentes pour creer l'alt et le badge puis les ajoute dans le code html de index.html
  */
 
 function defineOptionAndPrint() {
